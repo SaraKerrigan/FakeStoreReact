@@ -1,0 +1,71 @@
+.intro {
+  padding-top: 39px;
+  padding-bottom: 31px;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__pic {
+    @media (width < 509px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    max-width: 540px;
+    width: 100%;
+
+    @media (width < 992px) {
+      max-width: 330px;
+    }
+
+    @media (width < 689px) {
+      max-width: 285px;
+    }
+  }
+
+  &__item-title {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: 0%;
+    text-align: left;
+
+    @media (width < 992px) {
+      font-size: 40px;
+    }
+    @media (width < 689px) {
+      font-size: 36px;
+    }
+  }
+
+  &__item-title span {
+    color: var(--accentColor);
+  }
+
+  &__item-text {
+    color: var(--lightColor);
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    @media (width < 992px) {
+      margin-bottom: 40px;
+    }
+
+    @media (width < 689px) {
+      margin-top: 10px;
+      margin-bottom: 11px;
+    }
+
+    @media (width < 509px) {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  //   стили для кнопки прописаны в отдельном компоненте buttons
+}

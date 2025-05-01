@@ -1,0 +1,142 @@
+.header {
+  padding-top: 38px;
+  padding-bottom: 39px;
+  background: rgb(225, 237, 230);
+
+  @media (width < 689px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media (width < 509px) {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+
+  .container {
+    @media (width < 509px) {
+      padding: 0;
+    }
+    // обращаемся к контейнеру, находящегося внутри header
+  }
+
+  // мобильная версия
+  &__mob {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 509px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (width < 509px) {
+      display: flex;
+    }
+  }
+  .header__mob-logo {
+    padding-top: 17px;
+    padding-bottom: 16px;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__mob-items {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    width: 100%;
+  }
+
+  // планшетная версия
+
+  &__tablet {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 689px;
+    width: 100%;
+    margin: 0 auto;
+    @media (width < 689px) {
+      display: flex;
+    }
+    @media (width < 509px) {
+      display: none;
+    }
+  }
+
+  &__tablet-logo {
+    padding-bottom: 15.5px;
+  }
+
+  &__tablet-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 585px;
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid rgb(195, 209, 198);
+  }
+
+  // для компьютера
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (width < 689px) {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__link {
+    color: var(--mainColor);
+    font-size: 20px;
+    line-height: 23px;
+    position: relative;
+
+    &-counter {
+      display: none;
+      align-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accentColor);
+      color: rgb(255, 255, 255);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 12px;
+      text-align: center;
+      position: absolute;
+      left: 7px;
+      top: -8px;
+    }
+
+    &-counter-active {
+      display: block;
+    }
+  }
+
+  @media (width < 509px) {
+    &__tablet {
+      display: none;
+    }
+    &__mob {
+      display: flex;
+    }
+  }
+}

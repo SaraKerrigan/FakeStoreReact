@@ -1,0 +1,124 @@
+.pictures {
+  padding-bottom: 70px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__title {
+    color: var(--mainColor);
+    font-size: 40px;
+    line-height: 110%;
+    text-align: left;
+
+    @media (width < 992px) {
+      font-size: 30px;
+    }
+
+    @media (width < 689px) {
+      font-size: 24px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media (width < 689px) {
+      gap: 20px;
+    }
+
+    @media (width < 430px) {
+      overflow-x: auto;
+      //скролл в css
+    }
+  }
+
+  &__button {
+    color: var(--mainColor);
+    font-size: 20px;
+    line-height: 23px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgb(212, 232, 217);
+    border: none;
+    cursor: pointer;
+
+    @media (width < 689px) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__button-active {
+    color: rgb(244, 246, 245);
+    background: rgb(55, 107, 68);
+  }
+
+  &__items {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+    @media (width < 689px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    &-active {
+        display: grid;
+    }
+
+
+  }
+
+  &__item {
+    padding: 20px 20px 30px 20px;
+    background: rgb(225, 237, 230);
+  }
+
+  &__item-img {
+    width: 100%;
+  }
+
+  &__item-painter {
+    color: var(--lightColor);
+    line-height: 21px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__item-name {
+    color: var(--mainColor);
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  &__item-material {
+    color: var(--mainColor);
+    line-height: 21px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+
+  &__item-price {
+    color: var(--accentColor);
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__item-btn {
+    color: var(--accentColor);
+    font-size: 20px;
+    padding: 20px 60px;
+    border: 1px solid var(--accentColor);
+    cursor: pointer;
+    width: 100%;
+  }
+}

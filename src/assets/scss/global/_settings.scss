@@ -1,0 +1,17 @@
+body {
+  font-family: var(--fontFamily);
+  font-size: 18px;
+  font-weight: 500;
+  background: var(--background);
+
+  @media (width < 689px) {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: calc(var(--containerWidth) + var(--containerPadding) * 2);
+  margin: 0 auto;
+  padding: 0 var(--containerPadding);
+  min-width: 320px;
+}

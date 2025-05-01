@@ -1,0 +1,46 @@
+.team {
+  padding-top: 149px;
+  padding-bottom: 70px;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  &__images {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &__items-img-hand {
+    position: absolute;
+    bottom: 43px;
+    left: 48px;
+  }
+
+  &__item-title {
+    color: var(--mainColor);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+    text-align: left;
+  }
+
+  &__item-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--mainColor);
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  &__item-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,54 @@
+.button {
+  color: var(--accentColor);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  padding: 20px 60px;
+  text-align: center;
+  border: 1px solid var(--accentColor);
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+
+  @media (width < 992px) {
+    padding: 17.5px 54px;
+  }
+
+  @media (width < 689px) {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 14px 43px;
+  }
+
+  @media (width < 509px) {
+    padding-inline: 31px; //только боковые паддинги
+    // если только верх и них padding-block
+  }
+
+  &:hover {
+    background: var(--accentColor);
+    color: rgb(244, 246, 245);
+  }
+
+  &:active {
+    background: rgb(55, 107, 68);
+    color: rgb(255, 255, 255);
+  }
+
+  &--add {
+    color: rgb(44, 45, 53);
+    background: rgb(238, 219, 109);
+    border: 1px solid rgb(238, 219, 109);
+  
+
+    &:hover {
+      color: rgb(44, 45, 53);
+      border: 1px solid rgb(163, 131, 20);
+      background: rgb(250, 235, 151);
+    }
+    &:active {
+      color: rgb(44, 45, 53);
+      background: rgb(217, 185, 73);
+    }
+  }
+}
